@@ -15,7 +15,7 @@ void main(){
     // columns
     for(i = 0; i < h; i++){
 
-        //rows
+        //right aligned #
         for(j = h - i - 2; j > -1; j--){  
             printf(" ");
         }
@@ -23,7 +23,7 @@ void main(){
             printf("#");
         }
 
-        printf(" ");
+        printf("  ");
 
         //left aligned #
         for(l = 0; l < i+1; l++ ){
