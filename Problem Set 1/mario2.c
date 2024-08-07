@@ -1,7 +1,7 @@
 #include <cs50.c>
 #include <stdio.h>
 
-void main(){
+int main(void){
 
     int i, j, k, h, l;
 
