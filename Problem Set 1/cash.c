@@ -1,4 +1,4 @@
-#include <cs50.c>
+#include <cs50.h>
 #include <stdio.h>
 #include <math.h>
 
@@ -10,9 +10,10 @@ int main(void){
     {
         cash = get_float("Change owed: ");
     } while (cash < 0);
-    
+
     //convert dollars to cents, float to int
-    int cents = round(cash * 100);
+    //int cents = round(cash * 100);
+    int cents = round(cash);
 
     //greedy algo
     int count = 0;
@@ -41,7 +42,7 @@ int main(void){
         {
             count = 0;
         }
-    } 
+    }
     //print min count of coins used
-    printf("Number of coins: %d", count);
+    printf("%i \n", count);
 }

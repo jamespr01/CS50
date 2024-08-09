@@ -1,4 +1,4 @@
-#include <cs50.c>
+#include <cs50.h>
 #include <stdio.h>
 /*
 American express, AMEX: 15 digits, starts with 34 or 37
