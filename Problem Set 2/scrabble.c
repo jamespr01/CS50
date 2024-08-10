@@ -1,8 +1,8 @@
+#include <cs50.h>
 #include <ctype.h>
-#include <cs50.c>
 #include <stdio.h>
 #include <string.h>
-/*cs50 solutions, should run this on their docker container, issues with the cs50 lib if trying to run locally on win11 */
+
 // Points assigned to each letter of the alphabet
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
@@ -18,7 +18,7 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    // Print the winner   
+    // Print the winner
     if (score1 > score2)
     {
         printf("Player 1 wins!\n");
@@ -37,9 +37,10 @@ int compute_score(string word)
 {
     // Keep track of score
     int score = 0;
-
+    int len = strlen(word);
     // Compute score for each character
-    for (int i = 0, len = strlen(word); i < len; i++)
+    // [word[i] - 'A or a'] give the index of POINTS[] array, as the order of POINTS[] is same as ASCII table
+    for (int i = 0; i < len; i++)
     {
         if (isupper(word[i]))
         {
